@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Document</title>
+</head>
+    <body>
+
+        <div class="clicker">
+
+            <div class="clicker__button-area">
+                <div id="clicker-number"> 0 </div>
+                <button class="clicker__button" onClick="clickerClick(1)">Write Code</button>
+            </div>
+        </div>
+
+        <div class="options">
+
+            <div class="option__button-area">
+                <button type="button" class="save__button"  onClick="save()">Save</button>
+                <button type="button" class="load__button" onClick="load()">Load</button>
+                <button type="button" class="delete__button" onClick="deleteSave()">Delete Game</button>
+            </div>
+
+        </div>
+
+        <div class="buyables">
+
+            <div class="buyable">
+                <div id="robots" class="buyable__amount">0</div>
+                <div class="buyable__text">
+                    <div class="buyable__title">
+                        <span class="buyable__title-text">Repair Bot</span>
+                        <span id="robotCost" class="buyable__title-price">1 </span><span>Ship(s) Repaird</span>
+                    </div>
+                    <div class="buyable__descrption">Little metal helpers doing your work for you</div>
+                    <div class="buyable__effect">Repairs 1 ship per Robot</div>
+                </div>
+                <button id="robot" class="buyable__button" onClick="buyItem(robot, this.id)">Buy</button>
+            </div>
+
+            <div class="buyable">
+
+                <div class="buyable__amount">0</div>
+                <div class="buyable__text">
+                    <div class="buyable__title">
+                        <span class="buyable__title-text">Painter Bot</span>
+                        <span class="buyable__title-price">100 <span>Lines of Code</span></span>
+                    </div>
+                    <div class="buyable__descrption">Not the most skilled, but they get the work done</div>
+                    <div class="buyable__effect">Adds 1 line of code per second</div>
+                </div>
+                <button id="painter" class="buyable__button">Buy</button>
+
+            </div>
+
+        </div>
+        <script></script>
+    </body>
+</html>

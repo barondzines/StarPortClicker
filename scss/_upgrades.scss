@@ -1,0 +1,87 @@
+.clicker{
+
+    display: flex; //Makes this div a flexbox
+    align-items: center; //This centers things vertically
+    justify-content: center; //This centers things horizontally
+
+    background: #002b35;
+    height: 50%;
+
+    .clicker__button-area{
+
+        font-size:24px;
+        text-align:center;
+
+        background: #fdf6e3;
+        border-radius: 8px;
+        opacity: .8;
+        padding: 30px;
+
+        .clicker__button{
+
+            height:150px;
+            width:250px;
+
+            background-color: #fdf6e3;
+            border:none;
+            outline: none;
+        }
+    }
+}
+
+.buyables{
+
+    background: #fdf6e3;
+    height: 50%;
+    overflow: auto;
+
+    .buyable{
+
+        display: flex;
+        padding: 10px 20px;
+        margin: 10px;
+        border: 2px solid #002b36;
+        border-radius: 8px;
+        width: 600px;
+        height: 75px;
+
+        .buyable__amount{
+            align-self: center;
+            font-size: 24px;
+        }
+
+        .buyable__text{
+            flex-grow: 1;
+            margin: 0 20px;
+
+            .buyable__title{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+
+                .buyable__title-text{
+                    font-weight: bold;
+
+                }
+            }
+
+            .buyable__effect{
+                font-size: 12px;
+            }
+        }
+
+        .buyable__button{
+
+            align-self: center;
+            background: none;
+            border: 2px solid #859900;
+            border-radius: 8px;
+            color: #859900;
+            font-size: 20px;
+            height: 30px;
+            width: 80px;
+
+        }
+
+    }
+}
