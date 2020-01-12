@@ -23,30 +23,33 @@ function prettify(input){
  */
 
 
-function buyItem(item, id){
-    let itemCost = Math.floor(10 * Math.pow(1.1, item));
-    let nextCost = 0;
-
-    console.log('this is the id of the div:', id);
-
-    if(money >= itemCost){
-
-        if(id === repair){
-            repair = repair + 1;
-        } else if(id === robot){
-            robot = money + 1;
-        }
-
-        money = money - itemCost;
-        document.getElementById(toString().id).innerHTML = prettify(item);
+function buyRobot(){
+    let robotCost = Math.floor(10 * Math.pow(1.1, robot));
+    if(money >= robotCost){
+        robot = robot + 1;
+        money = money - robotCost;
+        document.getElementById('robots').innerHTML = prettify(robot);
         document.getElementById('clicker-number').innerHTML = prettify(money);
+        nextCost = Math.floor(10 * Math.pow(1.1,robot));
+        document.getElementById('robotCost').innerHTML = nextCost.toString();
     } else {
         console.log('You dont have enough money');
     }
-    nextCost = Math.floor(10 * Math.pow(1.1,item));
-    document.getElementById(toString().id + 'Cost').innerHTML = nextCost.toString();
 
 }
+
+/*
+function buyCursor(){
+    var cursorCost = Math.floor(10 * Math.pow(1.1,cursors));     //works out the cost of this cursor
+    if(cookies >= cursorCost){                                   //checks that the player can afford the cursor
+        cursors = cursors + 1;                                   //increases number of cursors
+    	cookies = cookies - cursorCost;                          //removes the cookies spent
+        document.getElementById('cursors').innerHTML = cursors;  //updates the number of cursors for the user
+        document.getElementById('cookies').innerHTML = cookies;  //updates the number of cookies for the user
+    };
+    var nextCost = Math.floor(10 * Math.pow(1.1,cursors));       //works out the cost of the next cursor
+    document.getElementById('cursorCost').innerHTML = nextCost;  //updates the cursor cost for the user
+};*/
 
 
 /**
@@ -60,6 +63,7 @@ function save(){
         var save={
             money: money,
             repair: repair,
+            robot: robot,
             prestige: prestige
         };
 
@@ -78,6 +82,7 @@ function load(){
 
     if(typeof saveGame.money !== "undefined") money = saveGame.money;
     if(typeof saveGame.repair !== "undefined") repair = saveGame.repair;
+    if(typeof saveGame.robot !== "undefined") robot = saveGame.robot;
 
 }
 
@@ -95,6 +100,6 @@ function deleteSave(){
 
 window.setInterval(function(){
 
-    clickerClick(repair);
+    clickerClick(robot);
 
 }, 1000);
