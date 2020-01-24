@@ -5,61 +5,115 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="js/main.js"></script>
-    <title>Document</title>
+    
+    <!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
+
+<!-- Compressed JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+    <title>Space Station Clicker</title>
 </head>
     <body>
 
-        <div class="clicker">
+        <div class="grid-container">
 
-            <div class="clicker__button-area">
-                <div id="clicker-number"> 0 </div>
-                <button class="clicker__button" onClick="clickerClick(1)">Write Code</button>
-            </div>
-        </div>
-
-        <div class="options">
-
-            <div class="option__button-area">
-                <button type="button" class="save__button"  onClick="save()">Save</button>
-                <button type="button" class="load__button" onClick="load()">Load</button>
-                <button type="button" class="delete__button" onClick="deleteSave()">Delete Game</button>
-            </div>
-
-        </div>
-
-        <div class="buyables">
-
-            <div class="buyable">
-                <div id="robots" class="buyable__amount">0</div>
-                <div class="buyable__text">
-                    <div class="buyable__title">
-                        <span class="buyable__title-text">Repair Bot</span>
-                        <span id="robotCost" class="buyable__title-price">1 </span><span>Ship(s) Repaird</span>
-                    </div>
-                    <div class="buyable__descrption">Little metal helpers doing your work for you</div>
-                    <div class="buyable__effect">Repairs 1 ship per Robot</div>
+            <div class="grid-x align-middle align-center">
+                <div class="cell text-center">
+                    Space Station Name Here
                 </div>
-                <button id="robot" class="buyable__button" onClick="buyRobot(robot)">Buy</button>
-            </div>
-
-            <div class="buyable">
-
-                <div class="buyable__amount">0</div>
-                <div class="buyable__text">
-                    <div class="buyable__title">
-                        <span class="buyable__title-text">Painter Bot</span>
-                        <span class="buyable__title-price">100 <span>Lines of Code</span></span>
-                    </div>
-                    <div class="buyable__descrption">Not the most skilled, but they get the work done</div>
-                    <div class="buyable__effect">Adds 1 line of code per second</div>
-                </div>
-                <button id="painter" class="buyable__button">Buy</button>
-
             </div>
 
         </div>
-        <script></script>
+
+        <div class="grid-container">
+
+            <div class="grid-x align-center align-middle large-up-2 small-up-1">
+
+                <div class="cell options space-station-cell">
+
+                    <div class="grid-x text-center align-middle align-center">
+
+                        <div class="cell space-station-container">
+
+                            <img src="./assets/spaceStation2.png" alt="Space Station">
+
+                        </div>
+
+                        <div class="cell">
+                            <div class="option__button-area">
+                                <button type="button" class="button primary save__button"  onClick="save()">Save</button>
+                                <button type="button" class="button primary load__button" onClick="load()">Load</button>
+                                <button type="button" class="button primary delete__button" onClick="deleteSave()">Delete Game</button>
+                            </div>
+
+                        </div>
+                        
+                    </div> 
+
+                    <div class="planetScape">
+                        <img src="./assets/planet.png" alt="Planet Background">
+                    </div>
+
+                </div>
+
+
+                <div class="cell  buyables space-station-modules">
+
+                    <h2>Space Station Modules</h2>
+
+                    <div class="grid-x grid-margin-y">
+
+                        <div id="feature" class="cell clicker">
+
+                            <div class="clicker__button-area">
+                                <div id="clicker-number"> 0 </div>
+                                <button class="button primary clicker__button" onClick="clickerClick(1)">Generate Power</button>
+                            </div>
+        
+                        </div> 
+
+                        <div id="feature" class="cell buyable robot-container">
+
+                            <div class="grid-x large-up-3 align-middle align-center">
+                                <div class="cell text-center robot-icon">
+                                    <img src="./assets/robot-icon.png" alt="Robot icon">
+                                </div>
+
+                                <div class="cell text-center">
+                                    <h3><span id="robot_count">0</span> Robots</h3>
+                                    <div>Robots are you friends to help you run your Space Station</span></div>
+                                    <div><span id="robot-cost">1</span><span> power per robot built</span></div>
+                                </div>
+
+                                <div class="cell text-center">
+                                    <button id="robot" class="button primary buyable__button" onClick="buyRobot(robot)">Construct Robot</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="feature" class="cell buyable">
+
+                            <div class="buyable__amount">0<span> Ships Available To Fix</span></div>
+                            <div class="bots_assigned">0<span> Bots Assigned</span></div>
+                            <div class="buyable__text">
+                                <div class="buyable__title">
+                                    <span class="buyable__title-text">Docking Bay</span>
+                                    <span class="buyable__title-price">5 <span>Power per Second</span></span>
+                                </div>
+                                <div class="buyable__descrption">Allows for ships to land for your robots to repair</div>
+                                <div class="buyable__effect">1<span>Gold Per ship Per Bot Assigned</span></div>
+                            </div>
+                            <button id="painter" class="button primary buyable__button">Buy</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>$(document).foundation();</script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

@@ -1,71 +1,31 @@
+#feature {
+  background-color: #0b494f8a;
+  border: solid 2px #0b494f;
+  border-radius: 5px;
+}
+
+.robot-container .robot-icon img {
+  width: 100px;
+}
+
+.space-station-cell .space-station-container img {
+  width: 400px;
+}
+
+.planetScape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
 body {
-  background-color: #000;
-  margin: 0; }
+  background: transparent !important;
+  color: #fff !important;
+  background-image: url("./assets/spacetile.jpg") !important;
+}
 
-.options .load__button, .options .save__button, .options .delete__button {
-  align-self: center;
-  background: none;
-  border: 2px solid #859900;
-  border-radius: 8px;
-  color: #859900;
-  font-size: 20px;
-  height: 30px;
-  width: auto; }
-
-.clicker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #002b35;
-  height: 50%; }
-  .clicker .clicker__button-area {
-    font-size: 24px;
-    text-align: center;
-    background: #fdf6e3;
-    border-radius: 8px;
-    opacity: .8;
-    padding: 30px; }
-    .clicker .clicker__button-area .clicker__button {
-      height: 150px;
-      width: 250px;
-      background-color: #fdf6e3;
-      border: none;
-      outline: none; }
-
-.buyables {
-  background: #fdf6e3;
-  height: 50%;
-  overflow: auto; }
-  .buyables .buyable {
-    display: flex;
-    padding: 10px 20px;
-    margin: 10px;
-    border: 2px solid #002b36;
-    border-radius: 8px;
-    width: 600px;
-    height: 75px; }
-    .buyables .buyable .buyable__amount {
-      align-self: center;
-      font-size: 24px; }
-    .buyables .buyable .buyable__text {
-      flex-grow: 1;
-      margin: 0 20px; }
-      .buyables .buyable .buyable__text .buyable__title {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5px; }
-        .buyables .buyable .buyable__text .buyable__title .buyable__title-text {
-          font-weight: bold; }
-      .buyables .buyable .buyable__text .buyable__effect {
-        font-size: 12px; }
-    .buyables .buyable .buyable__button {
-      align-self: center;
-      background: none;
-      border: 2px solid #859900;
-      border-radius: 8px;
-      color: #859900;
-      font-size: 20px;
-      height: 30px;
-      width: 80px; }
-
+.button {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

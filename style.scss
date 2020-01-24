@@ -1,2 +1,20 @@
+@import "scss/variables";
 @import "scss/global";
 @import "scss/upgrades";
+@import "scss/spaceStation";
+
+
+body {
+
+    background: transparent !important;
+    color: #fff !important;
+    background-image: url('./assets/spacetile.jpg') !important;
+    //background-repeat: no-repeat !important;
+    //background-size: cover !important;
+}
+
+
+.button
+{
+    color: #fff;
+}
