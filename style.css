@@ -1,7 +1,15 @@
+body {
+  font-size: 16px;
+}
+
 #feature {
   background-color: #0b494f8a;
   border: solid 2px #0b494f;
   border-radius: 5px;
+}
+
+.robot-container {
+  font-size: 12px;
 }
 
 .robot-container .robot-icon img {

@@ -1,3 +1,5 @@
+@import "variables";
+
 #feature {
 
     background-color: #0b494f8a;
@@ -7,6 +9,8 @@
 }
 
 .robot-container{
+
+    font-size: 12px;
 
     .robot-icon{
         img{
